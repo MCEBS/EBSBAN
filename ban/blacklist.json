@@ -1,0 +1,32 @@
+{
+  "blacklist": [ 
+    {        
+      "hash": "c8241ce2b21a25c6550a32b90e8cab8b882eb78e",
+      "state": "success",
+      "id": "0",
+      "qq": "test",
+      "date": "2020-02-19 21:17:30",
+      "validity": "2099-12-31 21:17:30",
+      "level": "3(high)",
+      "note": "恶意盗用别工作室网站数据库，态度恶劣。",
+      "confirm": "公投证实/云黑证实",
+      "evidence": "https://ban.mcebs.cc",
+      "from": "EBSBAN",
+      "remark": ""
+    },
+    {
+      "hash": "",
+      "state": "success",
+      "id": "1",
+      "qq": "",
+      "date": "",
+      "validity": "",
+      "level": "0",
+      "note": "",
+      "confirm": "未经证实",
+      "evidence": "",
+      "from": "",
+      "remark": ""
+    }
+  ]
+}
