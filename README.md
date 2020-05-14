@@ -21,11 +21,22 @@ EBSBAN is an open source, simple to call, transparent and open online blacklist 
 
 [MCEBS](https://mcebs.cc/) | [EBSBAN](https://ban.mcebs.cc/) | [MCEBS in Github](https://github.com/MCEBS/) | [Wiki](https://wiki.ban.mcebs.cc/)
 
+## ❓ Characteristic
+
+Differences between EBSBAN and other cloud blacklist platforms:
+
+- Open source
+- No backend (Just Javascript + Ajax)
+- Transparent and open (The database ```blacklist.json``` is open and protected with hash values ​​to prevent tampering)
+- Fair and Just (All events can only be added to the database after confirmation)
+
 ## 📖 Using EBSBAN
+
+You can use EBSBAN anywhere.
 
 ### Call EBSBAN to your webpage
 
-Copy the following code into the ```<body>``` area of your webpage:
+- Copy the following code into the ```<body>``` area of your webpage:
 
 ```
 <!-- Javascript -->
@@ -42,6 +53,11 @@ Copy the following code into the ```<body>``` area of your webpage:
 	<p id="ban"></p>
 </div>
 ```
+
+### Add new cloud blacklist record
+
+### Secondary development
+
 ## 🎈 Special Thanks
 
 ### Sponsor
@@ -70,7 +86,7 @@ Donors will be rewarded via express issue response, or even have your name displ
 
 - [Afdian](https://afdian.net/MCEBS)
 
-## Author
+## © Author
 
 **EBSBAN** © [MCEBS](https://mcebs.cc) & [fly6022](https://fly6022.fun/), Released under the Apache 2.0 License. 
 
