@@ -1,4 +1,4 @@
-# <center>EBSBAN·云端黑名单平台</center>
+<h1 align="center">EBSBAN·云端黑名单平台</h1>
 
 > ⚔ EBSBAN·云端黑名单平台，致力打造优质MC圈。
 
@@ -33,6 +33,7 @@ Copy the following code into the ```<body>``` area of your webpage:
 <script src="ban/ban.js"></script>
 
 <!-- html -->
+
 <div>
 	<input type="text" id="ebsban" placeholder="请在此处键入您要查询的QQ号或BAN ID.">
 	<input type="button" onClick="search()" value="查询">
@@ -49,7 +50,7 @@ Nobody.
 
 ### Contributors
 
-<div><a href="https://fly6022.fun/" target="_blank"><img height="60px" src="https://fly6022.fun/images/avatar.png"></a></div>
+[fly6022](https://fly6022.fun/)
 
 ## 🌱 Join Us
 
