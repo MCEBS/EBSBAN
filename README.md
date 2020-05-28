@@ -47,7 +47,7 @@ You can use EBSBAN anywhere.
 
 - Copy the following code into the ```<body>``` area of your webpage:
 
-```
+```html
 <!-- Javascript -->
 
 <script src="ban/ban.js"></script>
@@ -69,7 +69,104 @@ See "Wiki" for details.
 
 ### Secondary development
 
-See "Wiki" for details.
+#### ban.js
+
+During the secondary development process, the following code block stores is the content that we recommend you to modify (the content that is not listed is not recommended)
+
+On lines 6:
+
+```javascript
+    var url = "/ban/blacklist.json"
+```
+
+On lines 17-27:
+
+```javascript
+function search() {
+    search_value = document.getElementById('ebsban').value;
+    switch (search_value) {   
+            case '0':
+            case 'test':
+                document.getElementById("ban").innerHTML = "<b><font color='SpringGreen'>查询成功！</font></b>" + "<br>" + "<b>BAN ID:</b>" + json.EBSBAN[1].blacklist_1[0].id + "<br>" + "<b>QQ号:</b>" + json.EBSBAN[1].blacklist_1[0].qq + "<br>" + "<b>记录日期:</b>" + json.EBSBAN[1].blacklist_1[0].date + "<br>" + "<b>有效期至:</b>" + json.EBSBAN[1].blacklist_1[0].validity + "<br>" + "<b>云黑名单等级:</b>" + json.EBSBAN[1].blacklist_1[0].level + "<br>" + "<b>事件记录:</b>" + json.EBSBAN[1].blacklist_1[0].note + "<font color='red'><b>【重度违规，建议提高警惕】</b></font>" + "<br>" + "<b>证实情况:</b>" + json.EBSBAN[1].blacklist_1[0].confirm + "<br>" + "<b>证据链接:</b>" + json.EBSBAN[1].blacklist_1[0].evidence + "<br>" + "<b>查询结果来自:</b>" + json.EBSBAN[1].blacklist_1[0].from + "<br>" + "<b>备注:</b>" + json.EBSBAN[1].blacklist_1[0].remark + "<br>" + "<b>数据源哈希值</b>：" + json.EBSBAN[1].blacklist_1[0].hash;
+                break;
+            default:
+                document.getElementById("ban").innerHTML ="<font color='red'><b>查询失败！</b></font><br>请检查您输入的信息是否正确或者该信息从未录入。"; // 查询失败返回
+    }
+} 
+```
+
+#### blacklist.json
+
+The following code block stores the basic information of the cloud blacklist JSON data file (on lines 4-10 of ```blacklist.json```)
+
+```json
+       "data": [
+      {
+         "blacklist_num": "1",
+         "blacklist_change": "0",
+         "change_date": "2020-5-24 8:53:06"
+      }
+    ]
+```
+
+The following code block stores the blacklist information of the cloud blacklist JSON data file （on lines 12-27 of ```blacklist.json```)
+
+```
+    {
+      "blacklist_1": [ 
+      {
+        "hash": "c8241ce2b21a25c6550a32b90e8cab8b882eb78e",
+        "state": "success",
+        "id": "0",
+        "qq": "test",
+        "date": "2020-02-19 21:17:30",
+        "validity": "2099-12-31 21:17:30",
+        "level": "3(high)",
+        "note": "恶意盗用别工作室网站数据库，态度恶劣。",
+        "confirm": "公投证实/云黑证实",
+        "evidence": "https://ban.mcebs.cc",
+        "from": "EBSBAN",
+        "remark": ""
+      },
+```
+
+#### Data Format
+
+If you want to point a piece of Javascript code in ```ban.js``` to JSON content, you need to operate according to the following standards:
+
+For example:
+
+This Javascript code ```json.EBSBAN[1].blacklist_1[0].id``` is point to ```<-----```:
+
+```json
+{
+  "EBSBAN": [ 
+     {
+       "data": [
+      {
+         "blacklist_num": "1",
+         "blacklist_change": "0",
+         "change_date": "2020-5-24 8:53:06"
+      }
+    ]
+    },
+    {
+      "blacklist_1": [ 
+      {
+        "hash": "c8241ce2b21a25c6550a32b90e8cab8b882eb78e",
+        "state": "success",
+        "id": "0",  <----- 
+        "qq": "test",
+        "date": "2020-02-19 21:17:30",
+        "validity": "2099-12-31 21:17:30",
+        "level": "3(high)",
+        "note": "恶意盗用别工作室网站数据库，态度恶劣。",
+        "confirm": "公投证实/云黑证实",
+        "evidence": "https://ban.mcebs.cc",
+        "from": "EBSBAN",
+        "remark": ""
+      },
+```
 
 ## 🎈 Special Thanks
 
