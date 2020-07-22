@@ -11,7 +11,7 @@
 
 ## 📒 Introduction
 
-EBSBAN 是一个开放源代码、简单易调用、透明公开的线上黑名单系统，采用 Javascript + Ajax 开发。您（工作室、服务器、个人）可以将违规人员的相关信息提交给我们，经证实后可添加到云黑数据库中。EBSBAN 依赖于开源社区的生态快速发展中，目前已经与 [MCBAN](https://mcban.cn/) 等多家云黑机构展开合作。
+EBSBAN 是一个开放源代码、简单易调用、透明公开的线上黑名单系统，采用 Javascript + Ajax 开发。您（工作室、服务器、个人）可以将违规人员的相关信息提交给我们，经证实后可添加到云黑数据库中。EBSBAN 依赖于开源社区的生态快速发展中，目前已经与 [MCBAN](https://www.mcban.cn/) 等多家云黑机构展开合作。
 
 [MCEBS](https://mcebs.cc/) | [EBSBAN](https://ban.mcebs.cc/) | [MCEBS in Github](https://github.com/MCEBS/) 
 
@@ -41,19 +41,16 @@ Differences between EBSBAN and other cloud blacklist platforms:
 
 ## 📖 Using EBSBAN
 
+您可以在任何地方使用EBSBAN。
+
 You can use EBSBAN anywhere.
 
-### Call EBSBAN to your webpage
+### Call EBSBAN to your website
 
-- Copy the following code into the ```<body>``` area of your webpage:
+- Copy the following code into the ```<body>``` area of your website:
 
 ```html
-<!-- Javascript -->
-
-<script src="ban/ban.js"></script>
-
-<!-- html -->
-
+<script src="https://ban.mcebs.cc/ban/ban.js"></script>
 <div>
 	<input type="text" id="ebsban" placeholder="请在此处键入您要查询的QQ号或BAN ID.">
 	<input type="button" onClick="search()" value="查询">
@@ -71,13 +68,19 @@ See "Wiki" for details.
 
 #### ban.js
 
+在二次开发过程中，以下代码块中的内容是我们建议您修改的内容（不建议修改其它未列出的内容）
+
 During the secondary development process, the following code block stores is the content that we recommend you to modify (the content that is not listed is not recommended)
+
+在 第 6 行：
 
 On lines 6:
 
 ```javascript
     var url = "/ban/blacklist.json"
 ```
+
+在 第 17-27 行：
 
 On lines 17-27:
 
@@ -97,6 +100,8 @@ function search() {
 
 #### blacklist.json
 
+以下代码块存储的是云黑名单JSON数据文件的基本信息（在```blacklist.json```的第4-10行）
+
 The following code block stores the basic information of the cloud blacklist JSON data file (on lines 4-10 of ```blacklist.json```)
 
 ```json
@@ -108,6 +113,8 @@ The following code block stores the basic information of the cloud blacklist JSO
       }
     ]
 ```
+
+以下代码块存储的是云黑名单JSON数据文件的黑名单信息（在“```blacklist.json''`的第12-27行）
 
 The following code block stores the blacklist information of the cloud blacklist JSON data file （on lines 12-27 of ```blacklist.json```)
 
@@ -132,9 +139,15 @@ The following code block stores the blacklist information of the cloud blacklist
 
 #### Data Format
 
+如果要将```ban.js```中的一段Javascript代码指向一段JSON内容，则需要根据以下标准进行操作：
+
 If you want to point a piece of Javascript code in ```ban.js``` to JSON content, you need to operate according to the following standards:
 
+例如：
+
 For example:
+
+这个Javascript代码```json.EBSBAN[1].blacklist_1[0].id```指向的是```<-----```：
 
 This Javascript code ```json.EBSBAN[1].blacklist_1[0].id``` is point to ```<-----```:
 
