@@ -62,9 +62,14 @@ You can use EBSBAN anywhere.
 
 ### Add new cloud blacklist record
 
-See "Wiki" for details.
+详见 [https://ban.mcebs.cc/jubao&shensu.html](https://ban.mcebs.cc/jubao&shensu.html)
 
 ### Secondary development
+
+在二次开发过程当中，以下事项是需要您注意的：
+
+- EBSBAN**不支持在本地进行调试**，请上传至服务器进行调试（本地无法进行http请求）
+- 请**仔细阅读并严格遵守开源协议的要求**，本开源项目制作不易，请尊重原作者版权，否则我们有权终止您的二次开发活动
 
 #### ban.js
 
@@ -147,7 +152,7 @@ If you want to point a piece of Javascript code in ```ban.js``` to JSON content,
 
 For example:
 
-这个Javascript代码```json.EBSBAN[1].blacklist_1[0].id```指向的是```<-----```：
+这个Javascript代码```json.EBSBAN[1].blacklist_1[0].id```指向的是以下代码框中“```<-----```”对应的内容：
 
 This Javascript code ```json.EBSBAN[1].blacklist_1[0].id``` is point to ```<-----```:
 
