@@ -11,7 +11,7 @@
 
 ## 📒 Introduction
 
-EBSBAN 是一个开放源代码、简单易调用、透明公开的线上黑名单系统，采用 Javascript + Ajax 开发。您（工作室、服务器、个人）可以将违规人员的相关信息提交给我们，经证实后可添加到云黑数据库中。EBSBAN 依赖于开源社区的生态快速发展中，目前已经与 [MCBAN](https://www.mcban.cn/) 等多家云黑机构展开合作。
+EBSBAN 是一个开放源代码、简单易调用、透明公开的线上黑名单系统，采用 Javascript 开发。您（工作室、服务器、个人）可以将违规人员的相关信息提交给我们，经证实后可添加到云黑数据库中。EBSBAN 依赖于开源社区的生态快速发展中，目前已经与 [MCBAN](https://www.mcban.cn/) 等多家云黑机构展开合作。
 
 [MCEBS](https://mcebs.cc/) | [EBSBAN](https://ban.mcebs.cc/) | [MCEBS in Github](https://github.com/MCEBS/) 
 
@@ -19,7 +19,7 @@ EBSBAN 是一个开放源代码、简单易调用、透明公开的线上黑名�
 
 EBSBAN is an open source, simple to call, transparent and open online blacklist system, developed with Javascript. You (studio, server, individual) can submit the relevant information of the violators to us, and they can be added to the cloud blacklist database after verification. EBSBAN relies on the rapid development of the open source community and has already cooperated with [MCBAN](https://mcban.cn/) and other cloud black institutions.
 
-[MCEBS](https://mcebs.cc/) | [EBSBAN](https://ban.mcebs.cc/) | [MCEBS in Github](https://github.com/MCEBS/) 
+[MCEBS](https://mcebs.cc/) | [EBSBAN](https://ban.mcebs.cc/) | [MCEBS in Github](https://github.com/MCEBS/) | [在线查询](https://ban.mcebs.cc/search.html)
 
 ## ❓ Characteristic
 
@@ -68,8 +68,8 @@ You can use EBSBAN anywhere.
 
 在二次开发过程当中，以下事项是需要您注意的：
 
-- EBSBAN**不支持在本地进行调试**，请上传至服务器进行调试（本地无法进行http请求）
-- 请**仔细阅读并严格遵守开源协议的要求**，本开源项目制作不易，请尊重原作者版权，否则我们有权终止您的二次开发活动
+- EBSBAN**不支持在本地进行调试**，请上传至服务器进行调试（本地无法进行http请求；调试链接为“您的域名或IP/debug”）
+- 请**仔细阅读并严格遵守开源协议的要求**，本开源项目制作不易，请尊重原作者版权，在二次开发项目中注明原出处。
 
 #### ban.js
 
