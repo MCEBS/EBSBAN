@@ -26,7 +26,7 @@ EBSBAN is an open source, simple to call, transparent and open online blacklist 
 EBSBAN与其他云黑名单平台之间的区别：
 
 - 开放源代码
-- 无后端（仅Javascript + Ajax）
+- 无后端配置（仅Javascript）
 - 透明和开放（数据库```blacklist.json```是公开的，并用哈希值保护以防止篡改）
 - 公平和公正（所有事件只有在得到证实后才能添加到数据库中）
 
@@ -68,7 +68,7 @@ You can use EBSBAN anywhere.
 
 在二次开发过程当中，以下事项是需要您注意的：
 
-- EBSBAN**不支持在本地进行调试**，请上传至服务器进行调试（本地无法进行http请求；调试链接为“您的域名或IP/debug”）
+- EBSBAN**不支持在本地磁盘中进行调试**，请在本地服务器或上传至您的VPS进行调试（调试页面链接为“您的域名或IP/debug”）
 - 请**仔细阅读并严格遵守开源协议的要求**，本开源项目制作不易，请尊重原作者版权，在二次开发项目中注明原出处。
 
 #### ban.js
@@ -195,6 +195,10 @@ Nobody.
 ### Contributors
 
 [fly6022](https://fly6022.fun/)
+
+### Others
+
+感谢 [Sotap](https://github.com/sotapmc) 为本开源项目提供建议
 
 ## 🌱 Join Us
 
