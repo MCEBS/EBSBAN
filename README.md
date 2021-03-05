@@ -1,43 +1,46 @@
-<h1 align="center">EBSBAN·云端黑名单平台</h1>
+<h1 align="center">EBSBAN·云端黑名单系统</h1>
 
-> ⚔ EBSBAN·云端黑名单平台，致力打造优质MC圈。
+> ⚔ EBSBAN·云端黑名单系统，致力于打造前端黑名单系统。
 
-> ⚔ EBSBAN · Cloud Blacklist Platform, dedicated to creating high-quality Minecraft circles.
+> ⚔ EBSBAN · Cloud Blacklist System, committed to the front-end blacklist system.
 
 ![language](https://img.shields.io/badge/language-Javascript-orange)
 ![build](https://img.shields.io/badge/build-passing-success)
 [![licence](https://img.shields.io/badge/licence-Apache%202.0-blue)](https://github.com/MCEBS/EBSBAN/blob/master/LICENSE)
-[![chat_qq](https://img.shields.io/badge/chat-qq-66ccff)](https://jq.qq.com/?_wv=1027&k=lObjv1Zg)
 
 ## 📒 Introduction
 
-EBSBAN 是一个开放源代码、简单易调用、透明公开的线上黑名单系统，采用 Javascript 开发。您（工作室、服务器、个人）可以将违规人员的相关信息提交给我们，经证实后可添加到云黑数据库中。EBSBAN 依赖于开源社区的生态快速发展中，目前已经与 [MCBAN](https://www.mcban.cn/) 等多家云黑机构展开合作。
+EBSBAN 是一个开放源代码、简单易调用的前端黑名单系统，采用 Javascript 开发。您可以使用它，来构建属于自己的云端黑名单系统。EBSBAN 依赖于开源社区的生态快速发展中。
 
 [MCEBS](https://mcebs.cc/) | [EBSBAN](https://ban.mcebs.cc/) | [MCEBS in Github](https://github.com/MCEBS/) 
 
 <hr>
 
-EBSBAN is an open source, simple to call, transparent and open online blacklist system, developed with Javascript. You (studio, server, individual) can submit the relevant information of the violators to us, and they can be added to the cloud blacklist database after verification. EBSBAN relies on the rapid development of the open source community and has already cooperated with [MCBAN](https://mcban.cn/) and other cloud black institutions.
+EBSBAN is an open source, easy to call the front-end blacklist system, using JavaScript development. You can use it to build your own cloud blacklist system. EBSBAN relies on the open source community's rapidly evolving ecology.
 
 [MCEBS](https://mcebs.cc/) | [EBSBAN](https://ban.mcebs.cc/) | [MCEBS in Github](https://github.com/MCEBS/) | [在线查询](https://ban.mcebs.cc/search.html)
 
 ## ❓ Characteristic
 
-EBSBAN与其他云黑名单平台之间的区别：
+EBSBAN与其他云黑名单系统之间的区别：
 
 - 开放源代码
-- 无后端配置（仅Javascript）
-- 透明和开放（数据库```blacklist.json```是公开的，并用哈希值保护以防止篡改）
-- 公平和公正（所有事件只有在得到证实后才能添加到数据库中）
+- 无后端配置（仅Javascript + JSON）
+- 透明和开放（数据库```blacklist.json```是公开的，并用哈希值保护以防止篡改\*）
+- 使用JSON存储数据，便于维护，更具可移植性。
+
+注：哈希值自动生成功能会在后续版本推出。
 
 <hr>
 
-Differences between EBSBAN and other cloud blacklist platforms:
+Differences between EBSBAN and other cloud blacklist Systems:
 
 - Open source
-- No backend (Just Javascript + Ajax)
+- No backend (Just Javascript + JSON)
 - Transparent and open (The database ```blacklist.json``` is open and protected with hash values ​​to prevent tampering)
-- Fair and Just (All events can only be added to the database after confirmation)
+- Using JSON data storage, easy to maintain, more portable.
+
+Note: Hash generation will be available in a later version.
 
 ## 📖 Using EBSBAN
 
@@ -60,15 +63,11 @@ You can use EBSBAN anywhere.
 </div>
 ```
 
-### Add new cloud blacklist record
-
-详见 [https://ban.mcebs.cc/jubao&shensu.html](https://ban.mcebs.cc/jubao&shensu.html)
-
 ### Secondary development
 
 在二次开发过程当中，以下事项是需要您注意的：
 
-- EBSBAN**不支持在本地磁盘中进行调试**，请在本地服务器或上传至您的VPS进行调试（调试页面链接为“您的域名或IP/debug”）
+- EBSBAN请在web服务器中进行调试（调试页面链接为“您的域名或IP/debug”）
 - 请**仔细阅读并严格遵守开源协议的要求**，本开源项目制作不易，请尊重原作者版权，在二次开发项目中注明原出处。
 
 #### ban.js
@@ -79,28 +78,29 @@ During the secondary development process, the following code block stores is the
 
 在 第 6 行：
 
-On lines 6:
+On line 6:
 
 ```javascript
     var url = "/ban/blacklist.json"
 ```
 
-在 第 17-27 行：
+在 第 36-47 行：
 
-On lines 17-27:
+On line 36-47:
 
 ```javascript
-function search() {
-    search_value = document.getElementById('ebsban').value;
     switch (search_value) {   
             case '0':
-            case 'test':
-                document.getElementById("ban").innerHTML = "<b><font color='SpringGreen'>查询成功！</font></b>" + "<br>" + "<b>BAN ID:</b>" + json.EBSBAN[1].blacklist_1[0].id + "<br>" + "<b>QQ号:</b>" + json.EBSBAN[1].blacklist_1[0].qq + "<br>" + "<b>记录日期:</b>" + json.EBSBAN[1].blacklist_1[0].date + "<br>" + "<b>有效期至:</b>" + json.EBSBAN[1].blacklist_1[0].validity + "<br>" + "<b>云黑名单等级:</b>" + json.EBSBAN[1].blacklist_1[0].level + "<br>" + "<b>事件记录:</b>" + json.EBSBAN[1].blacklist_1[0].note + "<font color='red'><b>【重度违规，建议提高警惕】</b></font>" + "<br>" + "<b>证实情况:</b>" + json.EBSBAN[1].blacklist_1[0].confirm + "<br>" + "<b>证据链接:</b>" + json.EBSBAN[1].blacklist_1[0].evidence + "<br>" + "<b>查询结果来自:</b>" + json.EBSBAN[1].blacklist_1[0].from + "<br>" + "<b>备注:</b>" + json.EBSBAN[1].blacklist_1[0].remark + "<br>" + "<b>数据源哈希值</b>：" + json.EBSBAN[1].blacklist_1[0].hash;
+            case 'test': {
+                classdata = 1; 
+                listdata = 0;
+                note = "<font color='red'><b>【重度违规，建议提高警惕】</b></font>";
+                get();
+            }  
                 break;
             default:
-                document.getElementById("ban").innerHTML ="<font color='red'><b>查询失败！</b></font><br>请检查您输入的信息是否正确或者该信息从未录入。"; // 查询失败返回
+                document.getElementById("ban").innerHTML = e; // 查询失败返回
     }
-} 
 ```
 
 #### blacklist.json
@@ -198,7 +198,7 @@ Nobody.
 
 ### Others
 
-感谢 [Sotap](https://github.com/sotapmc) 为本开源项目提供建议
+Nobody.
 
 ## 🌱 Join Us
 
