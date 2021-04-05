@@ -21,7 +21,7 @@
         "level": "3(high)",
         "note": "恶意盗用别工作室网站数据库，态度恶劣。",
         "confirm": "公投证实/云黑证实",
-        "evidence": "https://ban.mcebs.cc",
+        "evidence": "https://ban.example.com",
         "from": "EBSBAN",
         "remark": ""
       },
@@ -35,7 +35,7 @@
         "level": "3(high)",
         "note": "恶意盗用别工作室网站数据库，态度恶劣。",
         "confirm": "公投证实/云黑证实",
-        "evidence": "https://ban.mcebs.cc",
+        "evidence": "https://ban.example.com",
         "from": "EBSBAN",
         "remark": ""
       }

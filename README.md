@@ -12,13 +12,13 @@
 
 EBSBAN 是一个开放源代码、简单易调用的前端黑名单系统，采用 Javascript 开发。您可以使用它，来构建属于自己的云端黑名单系统。EBSBAN 依赖于开源社区的生态快速发展中。
 
-[MCEBS](https://mcebs.cc/) | [EBSBAN](https://ban.mcebs.cc/) | [MCEBS in Github](https://github.com/MCEBS/) 
+[MCEBS](https://example.com/) | [EBSBAN](https://ban.example.com/) | [MCEBS in Github](https://github.com/MCEBS/) 
 
 <hr>
 
 EBSBAN is an open source, easy to call the front-end blacklist system, using JavaScript development. You can use it to build your own cloud blacklist system. EBSBAN relies on the open source community's rapidly evolving ecology.
 
-[MCEBS](https://mcebs.cc/) | [EBSBAN](https://ban.mcebs.cc/) | [MCEBS in Github](https://github.com/MCEBS/) | [在线查询](https://ban.mcebs.cc/search.html)
+[MCEBS](https://example.com/) | [EBSBAN](https://ban.example.com/) | [MCEBS in Github](https://github.com/MCEBS/) | [在线查询](https://ban.example.com/search.html)
 
 ## ❓ Characteristic
 
@@ -53,7 +53,7 @@ You can use EBSBAN anywhere.
 - Copy the following code into the ```<body>``` area of your website:
 
 ```html
-<script src="https://ban.mcebs.cc/ban/ban.js"></script>
+<script src="https://ban.example.com/ban/ban.js"></script>
 <div>
 	<input type="text" id="ebsban" placeholder="请在此处键入您要查询的QQ号或BAN ID.">
 	<input type="button" onClick="search()" value="查询">
@@ -136,7 +136,7 @@ The following code block stores the blacklist information of the cloud blacklist
         "level": "3(high)",
         "note": "恶意盗用别工作室网站数据库，态度恶劣。",
         "confirm": "公投证实/云黑证实",
-        "evidence": "https://ban.mcebs.cc",
+        "evidence": "https://ban.example.com",
         "from": "EBSBAN",
         "remark": ""
       },
@@ -180,7 +180,7 @@ This Javascript code ```json.EBSBAN[1].blacklist_1[0].id``` is point to ```<----
         "level": "3(high)",
         "note": "恶意盗用别工作室网站数据库，态度恶劣。",
         "confirm": "公投证实/云黑证实",
-        "evidence": "https://ban.mcebs.cc",
+        "evidence": "https://ban.example.com",
         "from": "EBSBAN",
         "remark": ""
       },
@@ -206,7 +206,7 @@ Nobody.
 
 Welcome to join the MCEBS technical team, where you can get a lot of happiness!
 
-[Join Us](https://join.mcebs.cc)
+[Join Us](https://join.example.com)
 
 ## 💖 Support EBSBAN
 
@@ -238,8 +238,8 @@ Helping EBSBAN to complete the internationalization of open source projects usua
 
 ## © Author
 
-**EBSBAN** © [MCEBS](https://mcebs.cc) & [fly6022](https://fly6022.fun/), Released under the Apache 2.0 License. 使用 Apache 2.0 License 许可发行. 
+**EBSBAN** © [MCEBS](https://example.com) & [fly6022](https://fly6022.fun/), Released under the Apache 2.0 License. 使用 Apache 2.0 License 许可发行. 
 
 Authored and maintained by MCEBS with help from contributors. 由MCEBS在贡献者的帮助下编写和维护。
 
-> Email: [@MCEBS](mailto:gf@mcebs.cc) · Github: [@MCEBS](https://github.com/MCEBS) · Website: [@MCEBS](https://mcebs.cc/)
+> Email: [@MCEBS](mailto:gf@example.com) · Github: [@MCEBS](https://github.com/MCEBS) · Website: [@MCEBS](https://example.com/)
